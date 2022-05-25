@@ -1,0 +1,36 @@
+@use "../abstract" as var;
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__logo-box {
+		display: flex;
+		align-items: center;
+
+		&__logo {
+			margin-right: 1.5rem;
+			color: var.$color-white;
+			font-size: 5rem;
+		}
+
+		&__name {
+			color: var.$color-grey;
+			font-size: 4.5rem;
+			font-family: "Odibee Sans", cursive;
+
+			&-span {
+				color: var.$color-white;
+			}
+		}
+	}
+
+	&__navigation {
+		&__link {
+			&:not(:last-child) {
+				margin-right: 5rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+@use "../abstract" as var;
+
+.footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 10rem;
+	background-color: var.$color-grey;
+
+	&__link {
+		font-size: 1.8rem;
+		color: var.$color-white;
+	}
+}

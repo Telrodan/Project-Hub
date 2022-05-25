@@ -1,19 +1,22 @@
 {
-  "name": "project-hub",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Telrodan/Project-Hub.git"
-  },
-  "author": "Keresztes-Nagy Bence",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Telrodan/Project-Hub/issues"
-  },
-  "homepage": "https://github.com/Telrodan/Project-Hub#readme"
+	"name": "project-hub",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"watch:css": "sass src/sass/main.scss src/css/style.css -w"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Telrodan/Project-Hub.git"
+	},
+	"author": "Keresztes-Nagy Bence",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Telrodan/Project-Hub/issues"
+	},
+	"homepage": "https://github.com/Telrodan/Project-Hub#readme",
+	"devDependencies": {
+		"sass": "^1.52.1"
+	}
 }

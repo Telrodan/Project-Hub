@@ -1,0 +1,172 @@
+@use "../abstract" as var;
+/////////////////
+// Landing Page
+.landing-page {
+	position: relative;
+	padding: 4rem;
+	background-color: var.$color-blue-2;
+
+	//////////////////////
+	// Header
+	& .header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 5rem;
+
+		&__image {
+			width: 35%;
+			margin-bottom: 2rem;
+		}
+
+		&__heading {
+			color: var.$color-grey;
+			font-size: 9rem;
+			font-family: "Odibee Sans", cursive;
+
+			&-span {
+				color: var.$color-white;
+			}
+
+			&-sub {
+				margin: 3rem 0;
+				color: var.$color-white;
+				font-size: 2.2rem;
+			}
+		}
+	}
+	//////////////////////
+	// Features Section
+	& .section-features {
+		display: flex;
+		justify-content: space-between;
+		margin: 15rem auto;
+		width: 90%;
+
+		&__card {
+			position: relative;
+			width: 21%;
+			color: var.$color-grey;
+			padding: 4rem 1.5rem;
+			background-color: var.$color-white;
+			box-shadow: 0 0 1rem rgba(var.$color-black, 0.5);
+			border-radius: 5px;
+			text-align: center;
+			overflow: hidden;
+			z-index: 2;
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: calc(-100% + 1rem);
+				width: 100%;
+				height: 100%;
+				background-color: var.$color-blue-4;
+				transition: all 0.4s ease-in;
+				z-index: -1;
+			}
+
+			&:hover {
+				& > * {
+					color: var.$color-white;
+				}
+			}
+
+			&:hover:before {
+				bottom: 0;
+			}
+
+			&__icon {
+				margin-bottom: 1.5rem;
+				color: var.$color-blue-1;
+				font-size: 5rem;
+				z-index: 2;
+				transition: all 0.2s 0.2s;
+			}
+
+			&__name {
+				margin-bottom: 1.5rem;
+				font-size: 3rem;
+				font-weight: 500;
+				z-index: 2;
+				transition: all 0.2s;
+			}
+
+			&__description {
+				font-size: 2rem;
+				z-index: 2;
+				transition: all 0.2s;
+			}
+		}
+	}
+	//////////////////////
+	// Adventure Section
+	& .section-adventure {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 90%;
+		margin: 0 auto 15rem;
+
+		&__header {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			&__image {
+				width: 50%;
+				margin-bottom: 1.5rem;
+			}
+
+			&__heading {
+				margin-bottom: 13rem;
+				color: var.$color-grey;
+				font-size: 7rem;
+				font-family: "Odibee Sans", cursive;
+				letter-spacing: 1px;
+
+				&-span {
+					color: var.$color-white;
+				}
+			}
+		}
+
+		&__container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&:not(:last-child) {
+				margin-bottom: 12rem;
+			}
+		}
+
+		&__image {
+			width: 50%;
+		}
+
+		&__details {
+			position: relative;
+			width: 50%;
+			padding: 5rem;
+
+			&__heading {
+				margin-bottom: 5rem;
+				color: var.$color-grey;
+				font-size: 5rem;
+				font-family: "Odibee Sans", cursive;
+				letter-spacing: 1px;
+
+				&-span {
+					color: var.$color-white;
+				}
+			}
+
+			&__paragraph {
+				color: var.$color-white;
+				font-size: 2rem;
+			}
+		}
+	}
+}
